@@ -1,0 +1,28 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["title", "author", "isbn", "category", "availableCopies"],
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "isbn": {
+        "type": "string",
+        "pattern": "^[0-9]{13}$"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["Picture Book", "Classic", "Fiction", "Non-Fiction"]
+      },
+      "availableCopies": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "additionalProperties": false
+  }
+}
